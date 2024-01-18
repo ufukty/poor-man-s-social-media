@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  db:
+    image: socialnetwork-db
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: socialnetwork
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+  app:
+    image: socialnetwork-app
+    container_name: app
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: socialnetwork
+      MYSQL_PORT: 3306
+    volumes:
+      - ./app/src:/var/www/html
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,24 @@
+#share--container {
+    margin: 50px 0 0;
+    position: relative;
+}
+
+#share--container>div#share--label {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#share--container>input#share--input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+#feed--container {
+    margin-top: 100px;
+}

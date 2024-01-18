@@ -1,0 +1,107 @@
+@keyframes anim1 {
+
+    0%,
+    100% {
+        margin-top: -20px;
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+
+    50% {
+        margin-top: -15px;
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+div#load-message {
+    margin: 50px 40px;
+    height: 50px;
+}
+
+div#load-message>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .2s opacity ease-in-out;
+}
+
+div#load-message>div.toggle-on {
+    opacity: 1;
+}
+
+div#load-message>div.toggle-off {
+    opacity: 0;
+}
+
+div#load-message>div>p {
+    font-size: 11pt;
+    transition: .4s all ease-in-out;
+}
+
+div#load-message>div>a {
+    transition: .4s all .2s ease-in-out;
+    padding-top: 10px;
+}
+
+div#load-message>div.toggle-on>* {
+    margin-top: 0px;
+    opacity: 1;
+}
+
+div#load-message>div.toggle-off>* {
+    margin-top: 10px;
+    opacity: 0;
+}
+
+div#login,
+div#signup {
+    margin: 50px 40px 150px;
+    transition: .5s opacity ease-in-out;
+}
+
+div#login>div,
+div#signup>div {
+    margin-top: 40px;
+}
+
+div#login>div.thirdrow,
+div#signup>div.thirdrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.input-title {
+    position: absolute;
+    padding-left: 10px;
+    height: 20px;
+    font-size: 7pt;
+    color: #a54040;
+    text-transform: uppercase;
+    transition: .2s all ease-in-out;
+}
+
+div.input-title.toggle-off {
+    margin-top: -15px;
+    opacity: 0;
+}
+
+div.input-title.toggle-on {
+    margin-top: -20px;
+    opacity: 1;
+}
+
+div.input-title.blink {
+    animation: .4s anim1 linear;
+}
+
+div.input-title::before {
+    padding-right: 5px;
+    content: "\f12a";
+    font-family: "FontAwesome";
+    display: inline-block;
+}

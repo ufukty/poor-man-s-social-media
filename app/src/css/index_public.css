@@ -1,0 +1,10 @@
+div#index>div.secondrow {
+    width: min(500px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+div#index>div.secondrow>h1 {
+    font-size: 24pt;
+    font-weight: 300;
+}

@@ -1,0 +1,31 @@
+@keyframes photos {
+    from {
+        transform: translateY(40px)
+    }
+
+    to {
+        transform: translateX(calc(150px * (var(--idx) - 2))) translateY(calc((var(--idx) - 2) * (var(--idx) - 2) * 10px)) rotateZ(calc((var(--idx) - 2) * 8deg));
+    }
+}
+
+div#welcome {
+    position: relative;
+}
+
+div#welcome>div.firstrow {
+    width: min(800px, 100vw);
+    height: max(500px, min(600px, 60vh));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#welcome>div.firstrow>img.photo {
+    z-index: var(--idx);
+    display: block;
+    position: absolute;
+    animation: 500ms 0s photos 1 both ease-out;
+    border-radius: 8px;
+    transform-origin: bottom center;
+    box-shadow: 0 20px 70px -30px #0008;
+}

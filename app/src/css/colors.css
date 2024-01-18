@@ -1,0 +1,129 @@
+/****************** COMMON ******************/
+
+[class|="link"] {
+    color: #000000;
+}
+
+[class|="link"][class*="grey"] {
+    color: #888888;
+}
+
+[class|="link"][class*="color"] {
+    color: #409da5;
+}
+
+[class|="button"][class*="grey"] {
+    color: #ffffff;
+    background-color: #888888;
+}
+
+[class|="button"][class*="color"] {
+    color: #ffffff;
+    background-color: #409da5;
+}
+
+input[class|="input"] {
+    color: #555555;
+    border-color: #bbbbbb;
+}
+
+input[class|="input"]:focus {
+    border-color: #60bdc5
+}
+
+div.input-title.toggle-on+input[class|="input"]:focus {
+    border-color: #a54040
+}
+
+input[class|="input"]::-webkit-input-placeholder {
+    color: #555555;
+}
+
+input[class|="input"]::-moz-placeholder {
+    color: #555555;
+}
+
+input[class|="input"]::-ms-placeholder {
+    color: #555555;
+}
+
+input[class|="input"][class*="grey"] {
+    color: #ffffff;
+    background-color: #a2a2a2;
+}
+
+input[class|="input"][class*="grey"]::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+input[class|="input"][class*="grey"]::-moz-placeholder {
+    color: #ffffff;
+}
+
+input[class|="input"][class*="grey"]::-ms-placeholder {
+    color: #ffffff;
+}
+
+.error {
+    color: #a54040;
+}
+
+.warning {
+    color: #83a540;
+}
+
+.text-blue {
+    color: #62b1bd !important;
+}
+
+.text-green {
+    color: #6bc04b !important;
+}
+
+.text-red {
+    color: #ff4539 !important;
+}
+
+.text-yellow {
+    color: #f6b436 !important;
+}
+
+.bg-grey {
+    background-color: #eeeeee;
+}
+
+/****************** PUBLIC MENU ******************/
+
+div#menu.public>div#searchmenu>div.firstrow {
+    color: #000000;
+}
+
+div#menu.public div#searchmenu>div.secondrow {
+    color: #ffffff;
+}
+
+div#menu.public>div#searchmenu>div.secondrow>div#searchbutton {
+    background-color: #a2a2a2;
+}
+
+/****************** PUBLIC BIO ******************/
+
+div#bio>div.firstrow {
+    background-color: #f0f0f0;
+}
+
+/****************** USERLOGIN BIO ******************/
+
+div#bio>div#fixedbio {
+    background-color: #E8E8E8;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    div#bio>div#fixedbio {
+        background-color: hsla(0, 0%, 90%, 0.5);
+    }
+}
+
+div#bio>div.firstrow {
+    background-color: #f0f0f0;
+}

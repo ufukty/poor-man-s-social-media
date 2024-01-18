@@ -1,0 +1,451 @@
+@keyframes bg-grey {
+    0% {
+        background-color: #cccccc;
+    }
+
+    100% {
+        background-color: #dddddd;
+    }
+}
+
+.p-container {
+    margin: 20px 0;
+}
+
+.p-h1 {
+    font-size: 18pt;
+}
+
+.p-h2 {
+    font-size: 16pt;
+}
+
+.p-h3 {
+    font-size: 15pt;
+    color: #444444;
+}
+
+.p-p1,
+.p-p1w {
+    margin-top: 10px;
+    font-size: 12pt;
+    color: #444444;
+}
+
+.p-p2,
+.p-p2w {
+    margin-top: 10px;
+    font-size: 11pt;
+    color: #444444;
+}
+
+.p-p3,
+.p-p3w {
+    margin-top: 5px;
+    font-size: 11pt;
+    color: #888888;
+}
+
+.p-p1w,
+.p-p2w,
+.p-p3w {
+    width: 90%;
+}
+
+div#profile-photo {
+    font-size: 0;
+    margin: 50px calc(50% - 150px);
+}
+
+div#profile-photo>a>img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+div#profile-navigation {
+    font-size: 0;
+}
+
+div#profile-navigation>a:not(:first-child):before {
+    content: "\f105";
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    display: inline-block;
+    color: #888888;
+    margin: 0 10px;
+    font-size: 12pt;
+    top: -1px;
+}
+
+div#profile-stats {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div#profile-stats>a {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 31px);
+    padding: 10px 15px;
+    background-color: #ffffff;
+    margin-bottom: 1px;
+}
+
+div#profile-stats>a:not(:last-child) {
+    margin-right: 1px
+}
+
+div#profile-stats>a>i.fa {
+    font-size: 14pt;
+    margin-right: 15px;
+}
+
+div#profile-stats>a>span>div.title {
+    font-size: 9pt;
+}
+
+div#profile-stats>a>span>div.number {
+    margin-top: -2px;
+    font-size: 12pt;
+    font-weight: 800;
+}
+
+div#profile-actions {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div#profile-actions>* {
+    display: block;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #888888;
+}
+
+div#profile-actions>*:not(:last-child) {
+    margin-bottom: 1px;
+}
+
+div#profile-actions>*>i.fa {
+    margin-right: 20px;
+}
+
+div#profile-actions>*[class*='toggle']:not(.other-actions) {
+    transition: .2s all cubic-bezier(0.4, 0, 0.8, 1)
+}
+
+div#profile-actions>*.toggle-off.other-actions {
+    transition: .2s all cubic-bezier(0.4, 0, 0.8, 1)
+}
+
+div#profile-actions>*.toggle-off {
+    transform: translateY(-20px);
+    opacity: 0;
+    max-height: 0;
+    padding: 0 20px;
+    border: none;
+}
+
+div#profile-actions>*.toggle-on {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 65px;
+    padding: 20px;
+}
+
+div#contact-menu-hide-scrollbar {
+    overflow: hidden;
+    width: 100%;
+    height: 65px;
+}
+
+div#contact-menu {
+    height: 100px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+div#contact-menu-container {
+    white-space: nowrap;
+    font-size: 0;
+}
+
+div#contact-menu-container>a {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 10px 5px;
+    margin-right: 20px;
+    -webkit-flex: 1 0 auto;
+    border-radius: 5px;
+    color: #409da5;
+    background-color: #ffffff;
+    border: 2px solid #409da5;
+}
+
+div#contact-menu-container>a.active {
+    background-color: #409da5;
+    color: #ffffff;
+}
+
+div#contact-menu-container>a>i {
+    font-size: 16pt;
+    margin-bottom: 5px;
+}
+
+div#contact-menu-container>a>div {
+    font-size: 10pt;
+    white-space: nowrap;
+}
+
+div#contacts-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: .5s opacity ease-in-out;
+}
+
+div#contacts-list>a {
+    display: block;
+    font-size: 0;
+}
+
+div#contacts-list>a>div.photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div#contacts-list>a>div.photo>img {
+    width: 100%;
+}
+
+div#contacts-list>a>div.name {
+    margin: 5px auto 30px;
+    text-align: center;
+    font-size: 10pt;
+}
+
+div#contacts-list>a>div.name:empty {
+    width: 80px;
+    height: 18px;
+    border-radius: 9px;
+}
+
+div#contacts-list>a>div.name:empty,
+div#contacts-list>a>div.photo:empty {
+    animation: .5s bg-grey ease-in-out alternate infinite;
+}
+
+div.cl-message {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: .5s opacity ease-in-out, .5s transform ease-in-out;
+}
+
+div.cl-message.toggle-off {
+    opacity: 0;
+    transform: scaleY(-20px);
+}
+
+div.pc-container {
+    background-color: #ffffff;
+    max-height: auto;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px
+}
+
+div.pc-container>div.pc-header {
+    padding: 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888888;
+}
+
+div.pc-container>div.pc-header>div.pch-owner-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+div.pc-container>div.pc-header>div.pch-owner-photo>a>img {
+    width: 100%;
+}
+
+div.pc-container>div.pc-header>div.pch-owner-name {
+    margin-left: 10px;
+    font-size: 11pt;
+    flex-grow: 100;
+}
+
+div.pc-container>div.pc-header>div.pch-owner-name>a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div.pc-container>div.pc-header>div.pch-delete {
+    background-color: #ff0000;
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1s all ease-in-out;
+}
+
+div.pc-container>div.pc-header>div.pch-delete:hover {
+    background-color: #cc0000;
+}
+
+div.pc-container>div.pc-header>div.pch-delete>i {
+    margin-right: 10px;
+}
+
+div.pc-container>div.pc-body>img {
+    width: 100%;
+}
+
+div.pc-container>div.pc-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.pc-container>div.pc-footer>div {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    transition: .3s all ease-in-out;
+}
+
+div.pc-container>div.pc-footer>div.pcf-liked {
+    color: #ff4539;
+}
+
+div.pc-container>div.pc-footer>div.pcf-liked.active {
+    border-color: #ff4539;
+}
+
+div.pc-container>div.pc-footer>div.pcf-seen {
+    color: #f6b436;
+}
+
+div.pc-container>div.pc-footer>div.pcf-seen.active {
+    border-color: #f6b436;
+}
+
+div.pc-container>div.pc-footer>div.pcf-comment {
+    color: #62b1bd;
+}
+
+div.pc-container>div.pc-footer>div.pcf-comment.active {
+    border-color: #62b1bd;
+}
+
+div.pc-container>div.pc-footer>div.pcf-edit {
+    color: #6bc04b;
+}
+
+div.pc-container>div.pc-footer>div.pcf-edit.active {
+    border-color: #6bc04b;
+}
+
+div.pc-container>div.pc-footer>div>i {
+    font-size: 15pt
+}
+
+div.pc-container>div.pc-footer>div>div {
+    font-size: 10pt;
+    display: inline-block;
+}
+
+div.pc-container>div.pc-footer>div:not(.pcf-edit)>div {
+    padding: 0 5px;
+}
+
+div.pc-container>div.pc-lists-container {
+    width: 100vw;
+    transition: .3s all linear;
+    overflow: hidden;
+    border-top: 1px solid #eeeeee;
+}
+
+div.pc-container>div.pc-lists-container.toggle-off {
+    opacity: 0;
+    height: 0;
+}
+
+div.pc-container>div.pc-lists-container.toggle-on {
+    opacity: 1;
+    height: 260px;
+}
+
+div.pc-lists-vertical-scrollbar-hide {
+    width: 100vw;
+    height: 300px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.pc-lists-vertical-wide {
+    width: 300vw;
+    display: flex;
+}
+
+div.pc-list {
+    width: 100vw;
+    height: 260px;
+    box-sizing: border-box;
+    padding: 10px 10px 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.pc-list>a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+div.pc-list>a>div.pcl-photo {
+    padding-right: 10px;
+    height: 40px;
+}
+
+div.pc-list>a>div.pcl-photo>img {
+    width: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+div.pc-list>a>div.pcl-desc {
+    width: calc(100vw - 2 * 20px - 40px - 10px);
+    font-size: 10pt;
+}
+
+div.pc-list>a>div.pcl-desc>b {
+    display: block;
+}
+
+div.pc-container {
+    transition: 1s height ease-in-out;
+}

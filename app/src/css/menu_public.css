@@ -1,0 +1,123 @@
+/********************MENU LAYOUT**********************/
+
+div#menu.public {
+    width: 100%;
+    background-color: #E5E5E5;
+}
+
+/********************STANDART MENU**********************/
+
+div#standartmenu {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+div#standartmenu.active {
+    display: flex;
+}
+
+div#standartmenu>div.left,
+div#standartmenu>div.right {
+    display: flex;
+    align-items: center;
+}
+
+div#standartmenu>div.left>a#menu_logo {
+    display: block;
+    font-size: 14pt;
+}
+
+div#standartmenu>div.left>a#menu_logo,
+div#standartmenu>div#menu_search.center {
+    padding: 10px 10px;
+}
+
+div#standartmenu>div.right>a#menu_login,
+div#standartmenu>div.right>a#menu_signup {
+    padding: 5px 10px;
+    font-size: 10pt;
+    display: block;
+    margin-right: 10px;
+}
+
+/*********************COMMON FOR OTHER MENUS*********************/
+
+div#menu.public>div>div:not(#standartmenu):not(#userlogin) {
+    display: none;
+    padding: 10px 0;
+}
+
+div#menu.public>div>div.active:not(#standartmenu):not(#userlogin) {
+    display: block;
+}
+
+div#menu.public>div div.back {
+    display: inline-block;
+    font-size: 11pt;
+}
+
+div#menu.public>div input::-moz-placeholder {
+    opacity: 1;
+}
+
+div#menu.public>div>div:not(#standartmenu)>div.firstrow {
+    padding: 0 10px 10px;
+}
+
+/*********************SEARCH MENU*********************/
+
+div#menu_search {
+    display: none;
+}
+
+div#menu.public>div>div#searchmenu {
+    display: none;
+}
+
+div#menu.public>div>div#searchmenu>div.secondrow {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
+}
+
+div#menu.public>div>div#searchmenu>div.secondrow>input#searchlabel {
+    width: calc(100% - 20px - 30px);
+    margin-left: 10px;
+}
+
+div#menu.public>div>div#searchmenu>div.secondrow>div#searchbutton {
+    display: inline-flex;
+    padding: 10px 10px 0;
+    margin-right: 10px;
+    font-size: 10pt;
+    text-align: right;
+    border-radius: 0 5px 5px 0;
+}
+
+/*********************LOGIN MENU*********************/
+
+div#menu.public>div>div#loginmenu>div.secondrow>input {
+    width: calc(100% - 40px);
+    margin-left: 10px;
+}
+
+div#menu.public>div>div#loginmenu>div.thirdrow {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 0;
+}
+
+div#menu.public>div>div#loginmenu>div.thirdrow>input#passwordlabel {
+    width: calc(100% - 110px);
+}
+
+div#menu.public>div>div#loginmenu>div.thirdrow>div>.login-button {
+    width: 80px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0;
+    text-align: center;
+}
