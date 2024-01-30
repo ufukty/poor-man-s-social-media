@@ -142,6 +142,7 @@ There are some user accounts already populated with data:
 -   DB schema designed for single DB server. It issues ordered integer IDs for rows which requires extra work to sync last issued number between servers.
 -   Enums are hardcoded.
 -   Implementation of relationship state is not the easiest alternative to maintain. Because of the number of edges and vertices making it hard to focus at once.
+-   Doesn't sanitize images uploaded by users.
 
 ## License
 
